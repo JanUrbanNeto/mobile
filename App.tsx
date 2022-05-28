@@ -5,8 +5,9 @@ import { View } from 'react-native';
 import AppLoading from 'expo-app-loading';
 import { useFonts, Inter_400Regular, Inter_500Medium } from '@expo-google-fonts/inter';
 
+import Widget from './src/components/Widget';
 import { theme } from './src/theme';
-import { Widget } from './src/components/Widget';
+import { useCallback, useEffect, useState } from 'react';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -15,7 +16,7 @@ export default function App() {
   })
 
   if (!fontsLoaded) {
-    return AppLoading
+    return < AppLoading />
   }
 
   return (
