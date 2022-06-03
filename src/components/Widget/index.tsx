@@ -3,7 +3,7 @@ import { TouchableOpacity } from 'react-native';
 
 import { styles } from './styles';
 
-export function Widget(){
+export function Widget() {
   return (
     <>
       <TouchableOpacity>
