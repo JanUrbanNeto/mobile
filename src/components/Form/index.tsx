@@ -2,10 +2,12 @@ import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
 import { ArrowLeft } from 'phosphor-react-native';
 
+import { Feedbacktype } from '../Widget';
+import { ScreenshotButton } from '../ScreenshotBotton';
+
 import { theme } from '../../theme';
 import { styles } from './styles';
-import { Feedbacktype } from '../Widget';
-import { feedbackTypes } from '../../utils/feedbackTypes'
+import { feedbackTypes } from '../../utils/feedbackTypes';
 
 interface Props {
    feedbackType: Feedbacktype
@@ -39,6 +41,14 @@ export function Form({ feedbackType }: Props) {
             placeholder="Algo não está funcionando bem? Queremos corrigir. Conte em detalhes o que está acontecendo, por gentileza!"
             placeholderTextColor={theme.colors.text_secondary}
          />
+
+         <View style={styles.footer}>
+            <ScreenshotButton
+               onTakeShot={() => {}}
+               onRemoveShot={() => {}}
+               screenshot=""
+            />
+         </View>
       </View>
    );
 }
