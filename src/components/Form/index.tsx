@@ -2,7 +2,8 @@ import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
 import { ArrowLeft } from 'phosphor-react-native';
 
-import { ScreenshotButton } from '../ScreenshotBotton';
+import { ScreenshotButton } from '../ScreenshotButton';
+import { Feedbacktype } from '../Widget';
 
 import { theme } from '../../theme';
 import { styles } from './styles';

@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { TouchableOpacity } from 'react-native';
-
-import { styles } from './styles';
-
-export function Widget() {
-  return (
-    <>
-      <TouchableOpacity>
-
-      </TouchableOpacity>
-    </>
-  );
-}
-=======
 import React, { useRef } from 'react';
 import { TouchableOpacity } from 'react-native';
 import { ChatTeardropDots } from 'phosphor-react-native';
@@ -65,4 +49,3 @@ export function Widget() {
 }
 
 export default gestureHandlerRootHOC(Widget)
->>>>>>> b02a7d591e4a3e57199d7827eee5b0bc2399b82c
