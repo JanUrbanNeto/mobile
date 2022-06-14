@@ -28,7 +28,7 @@ import { feedbackTypes } from '../../utils/feedbackTypes';
 
 export type Feedbacktype = keyof typeof feedbackTypes
 
-function Widget() {
+export function Widget() {
 
   const bottomSheetRef = useRef<BottomSheet>(null)
 

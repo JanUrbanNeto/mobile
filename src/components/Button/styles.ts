@@ -13,6 +13,7 @@ export const styles = StyleSheet.create({
 
   title: {
    fontSize: 14,
-   fontFamily: theme.fonts.medium
+   fontFamily: theme.fonts.medium,
+   color: theme.colors.text_on_brand_color
   }
 });

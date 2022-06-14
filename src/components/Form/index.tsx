@@ -2,12 +2,12 @@ import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
 import { ArrowLeft } from 'phosphor-react-native';
 
-import { Feedbacktype } from '../Widget';
 import { ScreenshotButton } from '../ScreenshotBotton';
 
 import { theme } from '../../theme';
 import { styles } from './styles';
 import { feedbackTypes } from '../../utils/feedbackTypes';
+import { Button } from '../Button';
 
 interface Props {
    feedbackType: Feedbacktype
@@ -25,8 +25,8 @@ export function Form({ feedbackType }: Props) {
             </TouchableOpacity>
 
             <View style={styles.titleContainer}>
-               <Image 
-                  source= {feedbackTypeInfo.image}
+               <Image
+                  source={feedbackTypeInfo.image}
                   style={styles.image}
                />
                <Text style={styles.titleText}>
@@ -35,7 +35,7 @@ export function Form({ feedbackType }: Props) {
             </View>
          </View>
 
-         <TextInput 
+         <TextInput
             multiline
             style={styles.input}
             placeholder="Algo não está funcionando bem? Queremos corrigir. Conte em detalhes o que está acontecendo, por gentileza!"
@@ -44,9 +44,13 @@ export function Form({ feedbackType }: Props) {
 
          <View style={styles.footer}>
             <ScreenshotButton
-               onTakeShot={() => {}}
-               onRemoveShot={() => {}}
+               onTakeShot={() => { }}
+               onRemoveShot={() => { }}
                screenshot=""
+            />
+
+            <Button
+               isLoading={false}
             />
          </View>
       </View>

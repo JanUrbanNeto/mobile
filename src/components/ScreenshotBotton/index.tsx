@@ -37,9 +37,6 @@ export function ScreenshotButton({ screenshot, onTakeShot, onRemoveShot }: Props
             weight="bold"
           />
       }
-      <Button 
-        isLoading={false}
-      />
       
     </TouchableOpacity>
   );
