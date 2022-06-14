@@ -4,15 +4,17 @@ import { ChatTeardropDots } from 'phosphor-react-native';
 import BottomSheet from '@gorhom/bottom-sheet';
 import { gestureHandlerRootHOC } from 'react-native-gesture-handler';
 
-import { styles } from './styles';
-import { theme } from '../../theme';
 import { Options } from '../Options';
 import { Form } from '../Form';
+import { Success } from '../Success';
+
+import { styles } from './styles';
+import { theme } from '../../theme';
 import { feedbackTypes } from '../../utils/feedbackTypes';
 
 export type Feedbacktype = keyof typeof feedbackTypes
 
-export function Widget() {
+function Widget() {
 
   const bottomSheetRef = useRef<BottomSheet>(null)
 
@@ -39,7 +41,7 @@ export function Widget() {
         backgroundStyle={styles.modal}
         handleIndicatorStyle={styles.indicator}
       >
-        <Form 
+        <Form
           feedbackType='BUG'
         />
       </BottomSheet>      
